@@ -46,6 +46,35 @@
       linear-gradient(180deg, rgba(10, 9, 8, 0.4) 0%, rgba(10, 9, 8, 0.85) 100%);
   }
 
+  /* ===== ПОДПИСИ ЗАГЛУШЕК ===== */
+  .placeholder-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    border-radius: 4px;
+    max-width: 80%;
+  }
+  .placeholder-label strong {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #c9a961;
+    margin-bottom: 8px;
+    word-break: break-all;
+  }
+  .placeholder-label span {
+    display: block;
+    font-size: 12px;
+    color: #b8b0a4;
+    line-height: 1.5;
+  }
+
   /* ===== NAV ===== */
   nav {
     position: fixed;
@@ -134,10 +163,10 @@
 
   /* ===== HERO ===== */
   .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
-    padding: 0 48px;
+    padding: 120px 48px 50px;
     position: relative;
   }
   .hero-content {
@@ -153,7 +182,7 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: #c9a961;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-weight: 500;
   }
   .hero-tag::before {
@@ -168,7 +197,7 @@
     font-weight: 500;
     line-height: 0.95;
     letter-spacing: -0.02em;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     color: #f5efe6;
   }
   .hero h1 em {
@@ -181,14 +210,14 @@
     font-size: 17px;
     color: #b8b0a4;
     line-height: 1.7;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
     font-weight: 300;
   }
   .hero-actions {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    margin-bottom: 80px;
+    margin-bottom: 28px;
   }
   .btn {
     padding: 18px 40px;
@@ -225,9 +254,9 @@
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    gap: 40px;
     max-width: 800px;
-    padding-top: 40px;
+    padding-top: 24px;
     border-top: 1px solid rgba(201, 169, 97, 0.2);
   }
   .stat-num {
@@ -246,10 +275,10 @@
   }
 
   /* ===== SECTIONS ===== */
-  section { padding: 120px 48px; position: relative; }
+  section { padding: 40px 48px; position: relative; }
   .section-inner { max-width: 1400px; margin: 0 auto; }
   .section-head {
-    margin-bottom: 80px;
+    margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -261,7 +290,7 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: #c9a961;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -295,14 +324,14 @@
 
   /* ===== PHILOSOPHY ===== */
   .philosophy {
-    padding: 160px 48px;
+    padding: 50px 48px;
     text-align: center;
     position: relative;
   }
   .philosophy::before {
     content: '"';
     position: absolute;
-    top: 60px; left: 50%;
+    top: 30px; left: 50%;
     transform: translateX(-50%);
     font-family: 'Cormorant Garamond', serif;
     font-size: 200px;
@@ -322,7 +351,7 @@
     z-index: 1;
   }
   .philosophy-author {
-    margin-top: 40px;
+    margin-top: 28px;
     font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -533,7 +562,7 @@
   /* ===== CTA ===== */
   .cta-section {
     text-align: center;
-    padding: 160px 48px;
+    padding: 50px 48px;
     position: relative;
   }
   .cta-section::before {
@@ -552,7 +581,7 @@
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 400;
     line-height: 1.05;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     letter-spacing: -0.01em;
   }
   .cta-title em {
@@ -563,7 +592,7 @@
     font-size: 17px;
     color: #b8b0a4;
     line-height: 1.7;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
   }
   .cta-actions {
     display: flex;
@@ -718,8 +747,8 @@
     .nav-cta { display: none; }
     .burger { display: block; }
     .hero, section, .philosophy, .cta-section { padding-left: 24px; padding-right: 24px; }
-    .hero { padding-top: 120px; padding-bottom: 60px; }
-    .philosophy, .cta-section { padding-top: 100px; padding-bottom: 100px; }
+    .hero { padding-top: 100px; padding-bottom: 40px; }
+    .philosophy, .cta-section { padding-top: 40px; padding-bottom: 40px; }
     .hero-stats { grid-template-columns: 1fr 1fr; gap: 32px; }
     .spaces-grid { grid-template-columns: 1fr; gap: 16px; }
     .space-card { aspect-ratio: 16/10; }
@@ -732,6 +761,9 @@
     .contacts-grid { grid-template-columns: 1fr; gap: 40px; }
     .contact-form { padding: 32px 24px; }
     footer { padding: 40px 24px 32px; }
+    .placeholder-label { max-width: 90%; padding: 16px; }
+    .placeholder-label strong { font-size: 11px; }
+    .placeholder-label span { font-size: 10px; }
   }
 
   /* ===== СМАРТФОН ===== */
@@ -742,7 +774,7 @@
     .hero-stats { grid-template-columns: 1fr; gap: 24px; }
     .hero-actions { flex-direction: column; width: 100%; }
     .hero-actions .btn { width: 100%; justify-content: center; }
-    .section-head { flex-direction: column; align-items: flex-start; gap: 20px; margin-bottom: 48px; }
+    .section-head { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
     .service-row { grid-template-columns: 1fr; gap: 8px; }
     .service-num { font-size: 20px; margin-bottom: 4px; }
     .service-info h3 { font-size: 20px; }
@@ -752,13 +784,21 @@
     .cta-actions { flex-direction: column; width: 100%; }
     .cta-actions .btn { width: 100%; justify-content: center; }
     .contact-form { padding: 28px 20px; }
+    .placeholder-label { padding: 12px; }
+    .placeholder-label strong { font-size: 10px; }
+    .placeholder-label span { font-size: 9px; }
   }
 </style>
 </head>
 <body>
 
 <!-- Фиксированный фон -->
-<div class="bg-fixed"></div>
+<div class="bg-fixed">
+  <div class="placeholder-label">
+    <strong>images/studio-bg.jpg</strong>
+    <span>Тёмный атмосферный интерьер студии с тёплым светом<br>1920×1080 (горизонтально)<br>Фон всего сайта (размытый)</span>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -828,6 +868,10 @@
     <div class="spaces-grid">
       <div class="space-card fade-up" style="background: linear-gradient(135deg, #2a1f18 0%, #3a2a20 100%);">
         <div class="space-card-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.3), rgba(42, 31, 24, 0.8));"></div>
+        <div class="placeholder-label">
+          <strong>images/space-prime.jpg</strong>
+          <span>Белый зал с циклорамой, мягкий свет<br>900×1200 (вертикально)<br>Карточка зала «Prime»</span>
+        </div>
         <div class="space-card-content">
           <div class="space-num">Зал № 01</div>
           <h3>Белый циклорам</h3>
@@ -842,6 +886,10 @@
 
       <div class="space-card fade-up" style="background: linear-gradient(135deg, #1a1614 0%, #0f0d0b 100%);">
         <div class="space-card-bg" style="background: linear-gradient(135deg, rgba(10, 9, 8, 0.7), rgba(26, 22, 20, 0.9));"></div>
+        <div class="placeholder-label">
+          <strong>images/space-forest.jpg</strong>
+          <span>Тёмный лофт, кирпич, драматичный свет<br>900×1200 (вертикально)<br>Карточка зала «Green Forest»</span>
+        </div>
         <div class="space-card-content">
           <div class="space-num">Зал № 02</div>
           <h3>Тёмный лофт</h3>
@@ -856,6 +904,10 @@
 
       <div class="space-card fade-up" style="background: linear-gradient(135deg, #3a2a20 0%, #5a4030 100%);">
         <div class="space-card-bg" style="background: linear-gradient(135deg, rgba(180, 80, 50, 0.3), rgba(58, 42, 32, 0.8));"></div>
+        <div class="placeholder-label">
+          <strong>images/space-podcast.jpg</strong>
+          <span>Зал с микрофонами, креслами, бархатом<br>900×1200 (вертикально)<br>Карточка «Подкаст студия»</span>
+        </div>
         <div class="space-card-content">
           <div class="space-num">Зал № 03</div>
           <h3>Зелёная комната</h3>
@@ -973,6 +1025,10 @@
     <div class="portfolio-grid">
       <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #3a2a20 0%, #1a1614 100%);">
         <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.4), rgba(26, 22, 20, 0.9));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-1.jpg</strong>
+          <span>Fashion-съёмка, модель<br>1200×800 (горизонтально)<br>Портфолио, плитка 1</span>
+        </div>
         <div class="portfolio-info">
           <div class="portfolio-tag">Fashion</div>
           <h4>Коллекция AW'25</h4>
@@ -980,6 +1036,10 @@
       </div>
       <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #1a1614 0%, #2a1f18 100%);">
         <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(180, 80, 50, 0.3), rgba(42, 31, 24, 0.9));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-2.jpg</strong>
+          <span>Портретная серия<br>800×1000 (вертикально)<br>Портфолио, плитка 2</span>
+        </div>
         <div class="portfolio-info">
           <div class="portfolio-tag">Портрет</div>
           <h4>Серия "Тишина"</h4>
@@ -987,6 +1047,10 @@
       </div>
       <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #2a1f18 0%, #3a2a20 100%);">
         <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.35), rgba(58, 42, 32, 0.9));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-3.jpg</strong>
+          <span>Подкаст с гостем<br>800×1000 (вертикально)<br>Портфолио, плитка 3</span>
+        </div>
         <div class="portfolio-info">
           <div class="portfolio-tag">Подкаст</div>
           <h4>«Голоса» · 12 эпизодов</h4>
@@ -994,6 +1058,10 @@
       </div>
       <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #0f0d0b 0%, #2a1f18 100%);">
         <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.25), rgba(15, 13, 11, 0.95));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-4.jpg</strong>
+          <span>Ювелирка, предметка<br>1600×800 (широкая)<br>Портфолио, плитка 4</span>
+        </div>
         <div class="portfolio-info">
           <div class="portfolio-tag">Предметка</div>
           <h4>Ювелирный дом LUMEN</h4>
@@ -1001,6 +1069,10 @@
       </div>
       <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #3a2a20 0%, #5a4030 100%);">
         <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(180, 80, 50, 0.4), rgba(90, 64, 48, 0.85));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-5.jpg</strong>
+          <span>Интервью крупным планом<br>800×1000 (вертикально)<br>Портфолио, плитка 5</span>
+        </div>
         <div class="portfolio-info">
           <div class="portfolio-tag">Интервью</div>
           <h4>Проект «Лица»</h4>
@@ -1008,6 +1080,10 @@
       </div>
       <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #1a1614 0%, #3a2a20 100%);">
         <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.3), rgba(42, 31, 24, 0.9));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-6.jpg</strong>
+          <span>Лукбук, минимализм<br>800×1000 (вертикально)<br>Портфолио, плитка 6</span>
+        </div>
         <div class="portfolio-info">
           <div class="portfolio-tag">Лукбук</div>
           <h4>SS'26 · Minimal</h4>
