@@ -758,6 +758,8 @@
     .portfolio-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 220px; }
     .portfolio-item:nth-child(1),
     .portfolio-item:nth-child(4) { grid-column: span 1; grid-row: span 1; }
+    /* 7-я плитка на планшете занимает 2 колонки для ровности */
+    .portfolio-item:last-child { grid-column: span 2; }
     .contacts-grid { grid-template-columns: 1fr; gap: 40px; }
     .contact-form { padding: 32px 24px; }
     footer { padding: 40px 24px 32px; }
@@ -780,6 +782,8 @@
     .service-info h3 { font-size: 20px; }
     .service-price { text-align: left; margin-top: 8px; }
     .portfolio-grid { grid-template-columns: 1fr; grid-auto-rows: 240px; }
+    /* На смартфоне все плитки обычной ширины */
+    .portfolio-item:last-child { grid-column: span 1; }
     .philosophy-text { font-size: 1.5rem; }
     .cta-actions { flex-direction: column; width: 100%; }
     .cta-actions .btn { width: 100%; justify-content: center; }
@@ -1087,6 +1091,18 @@
         <div class="portfolio-info">
           <div class="portfolio-tag">Лукбук</div>
           <h4>SS'26 · Minimal</h4>
+        </div>
+      </div>
+      <!-- НОВАЯ 7-Я ПЛИТКА -->
+      <div class="portfolio-item fade-up" style="background: linear-gradient(135deg, #2a2018 0%, #4a3828 100%);">
+        <div class="portfolio-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.35), rgba(74, 56, 40, 0.9));"></div>
+        <div class="placeholder-label">
+          <strong>images/work-7.jpg</strong>
+          <span>Рекламная кампания, студийный свет<br>800×1000 (вертикально)<br>Портфолио, плитка 7</span>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-tag">Реклама</div>
+          <h4>Кампания для AURORA</h4>
         </div>
       </div>
     </div>
